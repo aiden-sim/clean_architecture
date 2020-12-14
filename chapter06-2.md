@@ -120,7 +120,7 @@
 
 ![34 4](https://user-images.githubusercontent.com/7076334/102018786-d3b10980-3db2-11eb-90b3-6c60cb599998.png)
 
-- 도메인이 내부(com.mycompany.myapp.domain, 나머지는 외부(controller, repository)
+- 도메인이 내부(com.mycompany.myapp.domain), 나머지는 외부(controller, repository)
 - 의존성도 '내부'를 향해 흐른다. (의존 역전 제어)
 - 도메인 주도 설계 명명법을 보면 '내부'에 존재하는 모든 것의 이름은 반드시 **유비쿼터스 도메인 언어** 관점에서 기술하라
   - ex) OrdersRepository -> Orders
@@ -146,7 +146,7 @@
 
 - 신규 인력의 유스케이스 구현 예제
   - OrdersController => OrdersRepository 직접 접근 (그림 34.5)
-  - 이러한 조직화는 계층가 인접한 계층을 건너뛰는 일이 허용되기 떄문에 흔히 **완화된 계층형 아키텍처** 라고 부른다.
+  - 이러한 조직화는 계층가 인접한 계층을 건너뛰는 일이 허용되기 때문에 흔히 **완화된 계층형 아키텍처** 라고 부른다.
     - CQRS 패턴을 지키기 위해 의도적인 경우이고 이외의 경우 업무 로직 계층을 우회하는 일은 바람직하지 못함
     - 개별 레코드에 대한 인증된 접근만 허용하는 일을 업무 로직이 책임지는 경우라면 더더욱 그렇다.
     
